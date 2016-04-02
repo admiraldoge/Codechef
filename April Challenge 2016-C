@@ -1,0 +1,36 @@
+#include<iostream>
+#include<vector>
+#include<string>
+#include<algorithm>
+#include<map>
+#include<math.h>
+#include<set>
+#include<stdio.h>
+#include<queue>
+using namespace std;
+int main()
+{
+    ios::sync_with_stdio(0);
+    cout.tie(0);
+    cin.tie(0);
+    int nc;
+    vector<long long> v(2);
+    cin>>nc;
+    for(long long cs=0;cs<nc;cs++)
+	{
+	    cin>>v[0]>>v[1];
+	    if((v[0]==1&&v[1]!=2)||(v[0]!=2&&v[1]==1))
+		{
+		    cout<<"No\n";
+		    continue;
+		}
+	    if(v[0]%2==0||v[1]%2==0)
+		{
+		    cout<<"Yes\n";
+		}
+	    else
+		{
+		    cout<<"No\n";
+		}
+	}
+}
