@@ -1,0 +1,69 @@
+#include<iostream>
+#include<vector>
+#include<string>
+#include<algorithm>
+#include<map>
+#include<math.h>
+#include<set>
+#include<stdio.h>
+#include<queue>
+using namespace std;
+set<long long> s;
+int main()
+{
+    ios::sync_with_stdio(0);
+    cout.tie(0);
+    cin.tie(0);
+    int nc;
+    long long n;
+    long long r=0;
+    long long b=0;
+    long long g=0;
+    string s;
+    cin>>nc;
+    for(int cs=0;cs<nc;cs++)
+	{
+	    r=0;
+	    b=0;
+	    g=0;
+	    cin>>n>>s;
+	    for(int i=0;i<n;i++)
+		{
+		    switch(s[i])
+			{
+			case 'R':
+			    r++;
+			    break;
+			case 'B':
+			    b++;
+			    break;
+			case 'G':
+			    g++;
+			    break;
+			}
+		}
+	    //cout<<r<<" "<<b<<" "<<g<<endl;
+	    if(r>b)
+		{
+		    if(r>g)
+			{
+			    cout<<n-r<<"\n";
+			}
+		    else
+			{
+			    cout<<n-g<<"\n";
+			}
+		}
+	    else
+		{
+		    if(b>g)
+			{
+			    cout<<n-b<<"\n";
+			}
+		    else
+			{
+			    cout<<n-g<<"\n";
+			}
+		}
+	}
+}
